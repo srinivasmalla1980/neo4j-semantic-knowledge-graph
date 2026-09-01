@@ -1,0 +1,32 @@
+@prefix : <http://example.com/company#> .
+
+:AcmeCorp a :Company ;
+    :companyName "Acme Corporation" ;
+    :hasDepartment :Engineering, :Finance .
+
+:Engineering a :Department ;
+    :departmentName "Engineering" ;
+    :hasEmployee :Rahul, :Priya .
+
+:Finance a :Department ;
+    :departmentName "Finance" ;
+    :hasEmployee :Arun .
+
+:Rahul a :Employee ;
+    :employeeId "E001" ;
+    :employeeName "Rahul" ;
+    :jobTitle "Software Architect" ;
+    :worksIn :Engineering ;
+    :reportsTo :Priya .
+
+:Priya a :Employee ;
+    :employeeId "E002" ;
+    :employeeName "Priya" ;
+    :jobTitle "Engineering Manager" ;
+    :worksIn :Engineering .
+
+:Arun a :Employee ;
+    :employeeId "E003" ;
+    :employeeName "Arun" ;
+    :jobTitle "Finance Manager" ;
+    :worksIn :Finance .
